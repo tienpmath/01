@@ -3,11 +3,12 @@ import BlogPostTable from "@/components/admin/blog-post.table";
 
 import { sendRequest } from "@/utils/api";
 
-interface IProps {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-const BlogPostPage = async (props: IProps) => {
+// interface IProps {
+//   params: { id: string };
+//   searchParams: { [key: string]: string | string[] | undefined };
+// }
+const BlogPostPage = async (props: any) => {
+  // const id = props.params.id;
   const current = props?.searchParams?.current ?? 1;
   const pageSize = props?.searchParams?.pageSize ?? 10;
   const session = await auth();

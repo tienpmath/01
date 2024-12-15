@@ -2,11 +2,11 @@ import { auth } from "@/auth";
 import UserTable from "@/components/admin/user.table";
 import { sendRequest } from "@/utils/api";
 
-interface IProps {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-const ManageUserPage = async (props: IProps) => {
+// interface IProps {
+//   params: { id: string };
+//   searchParams: { [key: string]: string | string[] | undefined };
+// }
+const ManageUserPage = async (props: any) => {
   const current = props?.searchParams?.current ?? 1;
   const pageSize = props?.searchParams?.pageSize ?? 10;
   const session = await auth();
